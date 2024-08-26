@@ -1,21 +1,16 @@
 .cell {
     background-color: rgb(68, 0, 255);
-    height: 50px;
-    width: 50px;
-    margin: 5px;
-    border: 0px;
+    margin: 0px;
+    border: 1px solid;
+    border-color: rgb(255, 255, 255);
     flex-grow: 1;
     flex-shrink: 1;
 }
 
-.rows {
-    margin: 0px;
-    border: 0px;
-}
-
 #container {
     margin:auto;
-    max-width: 1000px;
+    height:800px;
+    width: 800px;
     flex-grow:1;
     display: flex;
     flex-wrap: wrap;
