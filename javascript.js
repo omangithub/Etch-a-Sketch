@@ -10,10 +10,13 @@ let columns = 16;
 let gridMargin = rows+columns;
 let cellSize = 800;
 
+
 // a function that randomizes the colors of the cells unsing math floor to round down and math random to create a random number
 function r() {
     return Math.floor(Math.random() * 256);
 }
+
+
 
 
 // A function that creates the grid
@@ -29,7 +32,13 @@ function divCreator () {
           cell.style.height =cellSizeStr;
           cell.style.width =cellSizeStr;       
           cell.addEventListener("mouseover", () => {
-            cell.style.backgroundColor = color;}); 
+            cell.style.backgroundColor = color; 
+            let currentOpacity = window.getComputedStyle(cell).opacity;
+            console.log(currentOpacity);
+            if (currentOpacity>0) {
+              cell.style.opacity = currentOpacity-0.1;
+            }               
+          });
         divSquares.appendChild(cell);
     }
 };
